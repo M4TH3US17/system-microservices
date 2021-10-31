@@ -16,7 +16,7 @@ public class PaymentResource {
 
 	@Autowired 
 	private PaymentService service;
-	
+
 	@GetMapping(value = "/{workerId}/days/{days}")
 	public ResponseEntity<Payment> find(@PathVariable Long workerId, @PathVariable Integer days){
 		Payment obj = service.getPayment(workerId, days);
